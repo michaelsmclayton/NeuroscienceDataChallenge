@@ -24,3 +24,6 @@ for dataID in dataIDs:
     filename = f'./data/{getFilename(info)}'
     if not(os.path.isfile(filename)):
         os.system(f'wget --no-check-certificate --output-document {filename} https://ndownloader.figshare.com/files/{dataID}')
+
+# Get stimulus data
+os.system('wget --no-check-certificate --output-document data/stimuli_class_assignment_confident.mat https://github.com/MouseLand/stringer-pachitariu-et-al-2018b/blob/master/classes/stimuli_class_assignment_confident.mat?raw=true')
